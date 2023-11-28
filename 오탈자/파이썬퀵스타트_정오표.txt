@@ -1,37 +1,37 @@
-[파이썬 퀵 스타트 - 업무에 바로 쓰는 파이썬] 책 오탈자
+[파이썬 퀵 스타트 - 업무에 바로 쓰는 파이썬] 책 오탈자 
 
 p187 - 첫번째 줄
-교재) 이번 장에서는 앞서 설치한 파이썬 표준 라이브러리인 
---> 정정) 이번 장에서는 앞서 설치한 파이썬 서드 파티 라이브러리인 
+	교재) 이번 장에서는 앞서 설치한 파이썬 표준 라이브러리인 
+	--> 정정) 이번 장에서는 앞서 설치한 파이썬 서드 파티 라이브러리인 
 
 p195 - 9.3.2 엑셀 수식과 차트 : 첫번째 줄
-교재) xlsxwriter 를 사용하면 기본적인 읽기와 쓰기 외에도
---> 정정) xlsxwriter 를 사용하면 기본적인 쓰기 외에도
+	교재) xlsxwriter 를 사용하면 기본적인 읽기와 쓰기 외에도
+	--> 정정) xlsxwriter 를 사용하면 기본적인 쓰기 외에도
 
 p223 : 밑에서 세번째 줄
-교재) Slides 변수
---> 정정) slides 변수
+	교재) Slides 변수
+	--> 정정) slides 변수
 
 p263 : 밑에서 두번재 줄
-교재) 생성된 ppt_chart_result.pptx 파일은
---> 정정) 생성된 ppt_chart.pptx 파일은
+	교재) 생성된 ppt_chart_result.pptx 파일은
+	--> 정정) 생성된 ppt_chart.pptx 파일은
 
 p263 : [그림 11-19] 제목
-교재) [그림 11-19] 생성된 ppt_chart_result.pptx 의 슬라이드1
---> 정정) [그림 11-19] 생성된 ppt_chart.pptx 의 슬라이드1
+	교재) [그림 11-19] 생성된 ppt_chart_result.pptx 의 슬라이드1
+	--> 정정) [그림 11-19] 생성된 ppt_chart.pptx 의 슬라이드1
 
 p264 : [그림 11-20] 제목
-교재) [그림 11-20] 생성된 ppt_chart_result.pptx 의 슬라이드2
---> 정정) [그림 11-20] 생성된 ppt_chart.pptx 의 슬라이드2
+	교재) [그림 11-20] 생성된 ppt_chart_result.pptx 의 슬라이드2
+	--> 정정) [그림 11-20] 생성된 ppt_chart.pptx 의 슬라이드2
 
 p264 : [그림 11-21] 제목
-교재) [그림 11-21] 생성된 ppt_chart_result.pptx의 슬라이드3
---> 정정) [그림 11-21] 생성된 ppt_chart.pptx의 슬라이드3
+	교재) [그림 11-21] 생성된 ppt_chart_result.pptx의 슬라이드3
+	--> 정정) [그림 11-21] 생성된 ppt_chart.pptx의 슬라이드3
 
 p275 : 표 5번째 행 #main 의 의미
-교재) 예) <?? Id="main">
---> 정정) 예) <?? id="main">
+	교재) 예) <?? Id="main">
+	--> 정정) 예) <?? id="main">
 
 p288 : 맨 아래 코드 Webdriver 를 모두 소문자로 변경
-교재) from selenium.Webdriver.common.keys.Keys
---> 정정) from selenium.webdriver.common.keys.Keys
+	교재) from selenium.Webdriver.common.keys.Keys
+	--> 정정) from selenium.webdriver.common.keys.Keys
