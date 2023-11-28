@@ -1,0 +1,368 @@
+4장. 함수로 코드 재사용하기 
+
+######################################
+아래 코드는 4장의 실습 내용입니다.
+>>> 부분의 코드를 파이썬 쉘에 입력하여 실행합니다.
+>>> 와 코드 사이에는 공백없이 입력합니다.
+>>> 다음에 나오는 코드는 파이썬 코드이고
+>>> 가 없는 부분은 실행결과 입니다.
+>>> 다음에 ... 부분은 코드를 이어서 작성하는 부분으로 후
+2~4칸 정도의 들여쓰기를 한 후 코드를 입력합니다.
+교재와 같이 단계별로 입력하여 실행 결과를 확인 합니다.
+######################################
+
+4.2.1 이름 있는 함수 만들기
+>>>def my_func( ):
+...     print("함수테스트")
+...
+
+>>>my_func( ) 
+함수테스트
+
+
+4.2.2 이름 없는 함수 만들기
+>>>(lambda a: a+a)(10)
+20
+
+>>>func = lambda a,b:a+b
+>>>func(10,20)
+30
+
+>>>def myFunc(n):
+...      return lambda x: x + n
+>>>print(myFunc(20)(10))
+30
+
+>>>a = [1,2,3,4]
+>>>b = [5,6,7,8]
+>>>list(map(lambda x, y:x+y, a, b))
+[6, 8, 10, 12]
+
+
+4.3.1 기본 인자값 
+>>>def my_func(a=10, b=20):
+...      return a*b
+...
+
+>>>my_func( )  
+200
+
+>>>my_func(100)  
+2000
+
+>>>my_func(100, 200)  
+20000
+
+>>>my_func(b=100) 
+1000
+
+>>>my_func(b=100, a=200)  
+20000
+
+>>>my_func(a=300, b=400)  
+120000
+
+>>>def my_func(a, c, b=10, d=20):
+...      return a+c+b+d
+
+
+4.3.2 키워드 인자값
+>>>def connect(server,port):
+...   	url = "http://"+server+":"+port
+...   	return url
+
+>>>connect('pypi.org','80')
+'http://pypi.org:80'
+
+>>>connect(port='8080', server='python.org')
+'http://python.org:8080'
+
+
+4.3.3 가변 길이 인자값
+>>>def func(*args):
+...   	print(args)
+...   	print(type(args))
+
+>>>func( )
+( )
+<class 'tuple'>
+
+>>>func(10,20)
+(10, 20)
+<class 'tuple'>
+
+>>>func(10,20,30,40)
+(10, 20, 30, 40)
+<class 'tuple'>
+
+
+4.3.4 딕셔너리 형태의 가변 길이 인자값
+>>>def get_url(server,port, **query):
+...      url = "http://"+server+":"+port+"/?"
+...      for key in query.keys( ): 
+...        url += key+"="+ query[key]+"&"  
+...      return url 
+
+>>>get_url('127.0.0.1','8080',id='sunny', word='python')
+'http://127.0.0.1:8080/?id=sunny&word=python&'
+
+
+4.4.1 파이썬 내장 함수(Built-in Functions) 호출
+>>>help(print)
+
+>>>print("함수호출 테스트")
+함수호출 테스트
+
+
+4.4.2 파이썬 내장 객체 타입(Built-in Types) 의 함수 호출
+>>>my_list = ['sunny','pyo','psy']  
+>>>my_list 
+['sunny', 'pyo', 'psy']
+
+>>>my_list.append("sunyoung")
+>>>my_list
+['sunny', 'pyo', 'psy', 'sunyoung']
+
+
+4.4.3 동일한 코드내의 함수 호출 
+>>>def func_test( ):
+...   print("사용자 정의함수")
+
+>>>func_test( )
+사용자 정의함수
+
+
+4.4.4 다른 모듈내의 함수 호출
+>>>import datetime
+>>>datetime.date(2023, 1, 1)
+datetime.date(2023, 1, 1)
+
+>>>d = datetime.date(2023, 1, 1)
+
+>>>type(d)
+<class 'datetime.date'>
+
+>>>d.year  
+2023
+
+>>>d.month 
+1
+
+>>>d.day  
+1
+
+>>>dir(__builtins__)
+
+>>>help(dir)
+
+
+4.5 함수의 docstring(도큐먼트) 만들기
+>>>def calc_salary(emp, salary):
+...      base = 2000000
+...      extra = 5000000
+...      if emp == '사원':
+...        salary = base + salary
+...      elif emp == '임원':
+...        salary = base + salary + extra
+...      print('salary : ' , salary)
+...
+
+>>>help(calc_salary)
+
+>>>calc_salary.__doc__ = """사용자 정의함수.
+... emp : 입력값은 사원 혹은 임원,
+... salary :  급여
+... 사원과 임원의 급여를 계산하여 출력한다."""
+
+>>>help(calc_salary)
+
+>>>def calc_salary(emp, salary):
+...      """사용자 정의함수.
+...        emp : 입력값은 사원 혹은 임원,
+...        salary :  급여
+...        사원과 임원의 급여를 계산하여 출력한다."""
+...      base = 2000000
+...      extra = 5000000
+...      if emp == '사원':
+...        salary = base + salary
+...      elif emp == '임원':
+...        salary = base + salary + extra
+...      print('salary : ' , salary)
+...
+
+>>>help(calc_salary)
+
+
+4.6 지역 및 전역 범위
+>>>count = 0
+>>>def my_func():
+...      name = 'my_func의 지역변수'
+...      print(name)
+...      print(count)
+...
+
+>>>my_func()
+my_func의 지역변수
+0
+
+>>>def my_func():
+...      name = 'my_func의 지역변수'
+...      print(name)
+...      count = count + 1
+...      print(count)
+...
+
+>>>my_func()
+my_func의 지역변수
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 4, in my_func
+UnboundLocalError: local variable 'count' referenced before assignment
+
+
+>>>def my_func():
+...      name = 'my_func의 지역변수'
+...      print(name)
+...      global count
+...      count = count + 1
+...      print(count)
+...
+
+>>>my_func()
+my_func의 지역변수
+1
+
+
+>>>def your_func():
+...      name = 'your_func의 지역변수'
+...      print(name)
+...      global count
+...      count = count + 1
+...      print(count)
+...
+
+>>>your_func()
+your_func의 지역변수
+2
+
+
+4.7 함수형 언어 특징
+>>>def test():  
+...      print("test함수 수행")
+
+
+# 함수 호출
+>>> test()
+test함수 수행
+
+# t 변수에 함수를 할당
+>>> t = test
+>>> type(t)
+<class 'function'>
+
+# t 이름으로 함수 호출
+>>> t()
+test함수 수행
+
+# t2 변수에 함수를 할당
+>>> t2 = t
+
+# t2 이름으로 함수 호출
+>>> t2()
+test함수 수행
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+6장. 모듈과 라이브러리 사용 
+
+######################################
+아래 코드는 6장의 실습 내용입니다.
+>>> 부분의 코드를 파이썬 쉘에 입력하여 실행합니다.
+>>> 와 코드 사이에는 공백없이 입력합니다.
+>>> 다음에 나오는 코드는 파이썬 코드이고
+>>> 가 없는 부분은 실행결과 입니다.
+교재와 같이 단계별로 입력하여 실행 결과를 확인 합니다.
+######################################
+
+6.5.1 str 클래스
+>>>s = "python"
+>>>type(s)
+<class 'str'>
+
+>>>s
+'python'
+
+>>>dir(str) 
+
+
+6.5.2 math 모듈
+>>>import math
+>>>dir(math) 
+
+
+6.5.4 datetime 모듈
+>>>import datetime
+>>>d = datetime.date.today()
+>>>d
+datetime.date(2022, 11, 14)
+>>>d.year
+2022
+>>>d.month
+11
+>>>d.day
+14
+
+>>>td = datetime.timedelta(days=10)
+>>>d + td
+datetime.date(2022, 11, 24)
+>>>d - td
+datetime.date(2022, 11, 4)
+
+
+6.5.5 calendar 모듈
+>>>import calendar
+>>>dir(calendar) 
+
+>>>help(calendar.prmonth)
+
+>>>calendar.prmonth(2023, 1)

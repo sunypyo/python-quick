@@ -1,0 +1,15 @@
+- 11장. pptx 모듈 사용시 에러 발생 문제
+
+아래 에러는 Python 3.10의 알려진 문제입니다 .
+해결 방법은 pptx 모듈을 import 하기 이전에 아래 import 를 추가하는 것입니다.
+
+예)
+import collections 
+import collections.abc
+from pptx import Presentation
+# 추가 import 문
+
+에러 메시지 참고)
+AttributeError: module 'collections' has no attribute 'Container'
+in File "...\lib\site-packages\pptx_init_.py",
+
