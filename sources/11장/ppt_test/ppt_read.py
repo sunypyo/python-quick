@@ -1,5 +1,6 @@
-import collections
-import collections.abc
+# import collections
+# import collections.abc
+# 위 두줄의 코드는 python-pptx 모듈의 버전이 1.0.2 아래 일때 필요
 from pptx import Presentation
 
 ppt_file = 'ppt_read_test.pptx'
@@ -19,12 +20,14 @@ for slide in prs.slides:
             continue
         # 텍스트가 있다면 텍스트의 paragraphs 들을 얻은 후, paragraph 하나씩 꺼내기
         for paragraph in shape.text_frame.paragraphs:
+            # 읽어온 단락의 텍스트 추출
+            text = paragraph.text
             # 읽어온 단락의 텍스트들을 화면에 출력
-            print(paragraph.text)
+            print(text)
             # 읽어온 단락을 리스트에 추가
-            texts.append(paragraph.text)
+            texts.append(text)
             # 읽어온 텍스트들을 파일에 저장
-            wfile.write(paragraph.text + '\n')
+            wfile.write(text + '\n')
 
 wfile.close()
 

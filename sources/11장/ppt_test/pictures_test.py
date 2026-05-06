@@ -1,5 +1,7 @@
-import collections
-import collections.abc
+# import collections
+# import collections.abc
+# 위 두줄의 코드는 python-pptx 모듈의 버전이 1.0.2 아래 일때 필요
+
 from pptx import Presentation
 from pptx.util import Inches
 

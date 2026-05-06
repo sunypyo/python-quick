@@ -27,12 +27,10 @@ for person in datas:
     if person['교육여부']:
         document = Document()
         name = person['이름']
-        document.add_heading('신입사원 교육 정보입니다.', level=0).alignment \
-            = align.CENTER
+        document.add_heading('신입사원 교육 정보입니다.', level=0).alignment = align.CENTER
         document.add_paragraph('안녕하세요 {0} 님, '.format(name))
         document.add_paragraph('쌤즈에 입사하신 것을 환영합니다.')
-        document.add_paragraph('귀하의 부서에서는 아래 교육을 진행합니다.').alignment \
-            = align.CENTER
+        document.add_paragraph('귀하의 부서에서는 아래 교육을 진행합니다.').alignment  = align.CENTER
         dept = person['부서']
         for team in teams[dept]:
             paragraph = document.add_paragraph()
