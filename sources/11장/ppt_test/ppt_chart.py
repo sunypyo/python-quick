@@ -1,6 +1,8 @@
 # import collections
 # import collections.abc
-# 위 두줄의 코드는 python-pptx 모듈의 버전이 1.0.2 아래 일때 필요
+# 위 두줄의 코드는 python-pptx 라이브러리(패키지)의 버전이 1.0.2 이전 일때 필요
+# 명령 프롬프트에서 아래 명령으로 python-pptx 의 지정된 버전 설치
+# pip install python-pptx==1.0.2
 from pptx import Presentation
 from pptx.chart.data import ChartData
 from pptx.enum.chart import XL_CHART_TYPE

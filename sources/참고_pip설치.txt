@@ -1,0 +1,10 @@
+python.exe -m pip install --upgrade pip
+
+pip install openpyxl==3.0.9
+pip install xlsxwriter==3.0.2
+pip install python-docx==0.8.11
+pip install python-pptx==1.0.2
+pip install selenium==4.1.0
+pip install pyinstaller==4.7
+
+

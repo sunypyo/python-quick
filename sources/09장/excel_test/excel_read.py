@@ -18,10 +18,18 @@ print("고객 워크시트 객체 : ", customer)
 # 이름 혹은 행/열 위치를 기준으로 셀을 읽기
 print("첫번째 셀 객체 : ", customer['A1'])
 print("첫번째 셀 객체의 값 : ", customer['A1'].value)
+print('=' * 30)
 
 # 셀 객체는 cell() 메소드를 사용하여 접속
 # 3행 2열의 셀 정보 가져오기
 print("다른 cell 객체정보:", customer.cell(row=3, column=2))
 print("다른 cell 객체가 가진 값:", customer.cell(row=3, column=2).value)
-
+print('=' * 30)
 print("이름:", customer['B3'].value, customer['C3'].value)
+print('=' * 30)
+
+# 추가 코드
+# 엑셀 파일의 '고객' 워크시트의 모든 행의 내용을 출력
+for row in customer.iter_rows(values_only=True):
+    print(row)
+
