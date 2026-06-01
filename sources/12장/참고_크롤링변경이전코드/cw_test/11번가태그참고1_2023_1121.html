@@ -1,0 +1,87 @@
+1) 1번가 페이지에 접속 --> 검색창을 찾는다
+
+<input type="text" class="search_text" title="통합검색" autocomplete="off" data-log-actionid-area="searchbox" data-log-actionid-label="open" data-log-body="{&quot;referer&quot;:&quot;https://www.11st.co.kr/main&quot;}">
+
+==================================
+2) 검색어를 입력하고 --> 검색 페이지로 이동
+검색페이지의 전체 페이지가 로딩 될때까지 기다린다
+
+검색된 페이지의 전체 상품을 가지는 div 요소
+<div id="layBodyWrap" tabindex="-1">
+			<div class="l_content">
+				<div class="s_search s_search_main">
+
+					
+3) 상위 메뉴 --> 쇼킹딜 찾아서 이동
+<div class="l_search_header">
+  <div class="b_search_tab">
+     <div class="inner">
+	    <div class="c_search_tab_link">
+		   <h1 class="sr-only">검색 서비스</h1>
+		      <ul>
+			      <li><a href="#" class="tab_bar_list_link active" ...>통합검색</a></li>
+				  <li><a href="#" class="tab_bar_list_link" ...>가격비교</a></li>
+				  <li><a href="#" class="tab_bar_list_link" ....>아마존
+				  <li><a href="#" class="tab_bar_list_link" ....>쇼킹딜</a></li>
+			</ul></div></div></div></div>
+     ....
+
+==================================
+4) 쇼킹딜 페이지로 이동, 기다린다
+
+쇼킹딜 페이지의 전체 상품을 가지는 div 요소
+<div id="layBodyWrap" tabindex="-1">
+.....
+
+5) 상품 정보들
+<section class="search_section "...> 태그를 가져온다
+
+6) 하나의 section 에서 상품 목록 --> 각 상품 --> 각 상품에 대한 정보를 가져온다
+<section class="search_section section_style_4" id="section_searchTabDeal">
+  <div class="c-search-list">
+     <ul class="c-search-list__container">
+		<li class="c-search-list__item">
+			<div class="c-card-item c-card-item--list">
+				<a href="https://www.11st.co.kr/products/3306335454?&amp;trTypeCd=MAT2&amp;trCtgrNo=585021&amp;checkCtlgPrd=true" class="c-card-item__anchor" ...>
+			....
+			<div class="c-card-item__info-top">
+			<dl>
+				<div class="c-card-item__name">
+					<dt>상품명</dt>
+					<dd>아르떼 새부리형 KF94 국산 마스크 100매 50매 대형 소형 컬러 화이트 블랙 식약처인증 개별포장</dd>
+				</div>
+			<dl class="c-card-item__price-info">
+				<dt>가격정보</dt>
+					<dd class="c-card-item__lowest">
+						<span class="c-card-item__lowest-text">11번가 최저가 </span>
+						<button type="button" class="c-iconinfo c-iconinfo--help" ...>도움말</button>
+					</dd>
+					<dd class="c-card-item__price">
+						<span class="value">8,420</span>
+					원~</dd>
+					<dd class="c-card-item__price-per">
+						<span class="value">168</span>
+						<span class="value">원/개당</span>
+					</dd>
+				</dl>
+				<div class="c-starrate">
+					<dl>
+						<dt>판매자평점 및 리뷰</dt>
+						<dd>
+							<span class="c-starrate__sati">
+								<span class="sr-only">판매자 평점</span>
+								<span class="c-starrate__gauge" style="width: 92%;">만족도 : 92%</span>
+								</span>
+								</dd><dd>
+								<span class="c-starrate__review">
+									<span class="sr-only">리뷰</span> 
+									<span class="value">28,671</span>
+								</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="c-card-item__benefit">
+						<dt>혜택정보</dt>
+					</div>
+				</dl>
+			</div>

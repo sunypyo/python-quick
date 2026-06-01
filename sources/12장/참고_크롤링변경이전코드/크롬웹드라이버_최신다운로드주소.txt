@@ -1,0 +1,45 @@
+크롬 웹 드라이버의 최신 버전 다운로드 주소가 변경되었습니다.
+아래 주소로 들어가서 chromedriver
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+예를 들어 사용하는 크롬 브라우저의 버전이
+버전 119.0.6045.160(공식 빌드) (64비트) 이라고 했을때, 
+
+위 링크에 접속하여 
+1) https://googlechromelabs.github.io/chrome-for-testing/#stable 에 접속합니다.
+2) Stable Version: 119.0.6045.105 (r1204232) 부분에서 
+	Binary 는 chromedriver, 
+	Platform 은 win64
+	URL 은 https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.105/win64/chromedriver-win64.zip
+	입니다.
+
+3) https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.105/win64/chromedriver-win64.zip 
+	을 복사하여 브라우저의 URL 창에 붙여넣기를 하면, 자동 다운로드 됩니다.
+4) 다운로드 된 파일의 압축을 해지하고, 압축 해지 디렉토리의 chromedriver.exe 파일을 복사하여, 
+	C:\Python310 디렉토리에 chromedriver.exe 파일을 붙여넣기 합니다.
+
+
+===참고)  chrome 브라우저 업데이트 중지 방법 ====
+1) Win+R -> 실행 ->서비스에서 실행
+Google 업데이트 서비스(gupdate) 사용 안함
+Google 업데이트 서비스(gupdatem) 사용 안함
+
+또는 Win+R -> 실행 -> msconfig 를 입력해 엔터를 눌러 시스템 구성을 실행
+서비스 탭에 들어가서 Google 업데이트 서비스 2가지 
+(gupdate, gupdatem) 옵션을 
+체크 해제하여 확인 버튼을 누름
+참고) msconfig 에서 서비스를 변경하는 것도 가능
+
+2) 시작->Windows 관리 도구->작업 스케줄러 메뉴를 선택
+GoogleUpdateTaskMachineCore, 
+GoogleUpdateTaskMachineUA 모두 
+마우스 오른쪽 버튼을 눌러 사용 안 함 메뉴를 선택
+
+작업 스케쥴러 실행 다른 방법)
+Win+R 키를 눌러 control schedtasks 입력
+제어판->모든 제어판 항목->관리 도구->작업 스케쥴러
+
+3) C:\Program Files (x86)\Google\Update 경로로 들어가서 
+GoogleUpdate.exe 실행 파일 이름을 변경
+GoogleUpdate.bak 이름으로 변경
+

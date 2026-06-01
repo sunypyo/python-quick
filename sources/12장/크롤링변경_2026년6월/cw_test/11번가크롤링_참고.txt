@@ -1,0 +1,168 @@
+1) 11번가 페이지에 접속 --> 검색창을 찾는다
+<input type="text" class="search_text" title="통합검색" ...> 
+
+==================================
+2) 검색어를 입력하고 --> 검색 페이지로 이동
+검색페이지의 전체 페이지가 로딩 될때까지 기다린다
+검색된 페이지의 전체 상품을 가지는 div 요소
+<div id="layBodyWrap" tabindex="-1">
+	<div class="l_content">
+		<div class="s_search s_search_main">
+		....
+
+
+==== 쇼킹딜 선택 =============
+3) 왼쪽의 메뉴 중에서 쇼킹딜을 찾는다
+<div class="search_filter_sort productType active" ....>
+	<div class="sort_title">
+		<h4 class="title">상품 유형</h4>
+		<button type="button" class="sort_title_btn"...>닫기</button>
+	</div>
+	<div class="sort_cont">
+		<ul class="sort_cont_list">
+			<li class="item">
+				<span class="radio_style_1">
+					<input type="radio" id="AbSJIPCPeLRntjM5vOR_D" name="productType" ...> 
+						<label for="AbSJIPCPeLRntjM5vOR_D">해외직구</label>
+					</span>
+			</li>
+			<li class="item">
+				<span class="radio_style_1">
+					<input type="radio" id="83v1taINAmtCBGJJCR-mi" name="productType" ...>
+						<label for="83v1taINAmtCBGJJCR-mi">해외직구 제외</label>
+				</span>
+			</li>
+			<li class="item">
+				<span class="radio_style_1">
+					<input type="radio" id="s_jzRbG2QmaXqj9hiPkuU" name="productType" ...> 
+						<label for="s_jzRbG2QmaXqj9hiPkuU">쇼킹딜</label>
+				</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+=========================================
+4) 쇼킹딜 페이지로 이동, 기다린다
+쇼킹딜 페이지의 전체 상품을 가지는 div 요소
+<div id="layBodyWrap" tabindex="-1">
+.....
+
+=========================================
+5) 상품 정보들 <section class="search_section "...> 태그를 모두 가져온다
+각 상품들은 하나하나의 <li class="c-search-list__item"> 태그에 포함되어 있다
+
+<section class="search_section" id="section_topAdArea">
+	<div class="c-p-headline">
+		<h3 class="c-p-headline__title">한 눈에 쏙! 인기상품 추천</h3>
+		<div class="c-ad-box">
+			<button type="button" class="c-ad-box__button" >광고표기</button>
+		</div>
+	</div>
+	<div class="c-search-list">
+		<ul class="c-search-list__container">
+			<li class="c-search-list__item">
+				<div class="c-card-item c-card-item--list">
+					<a href=... class="c-card-item__anchor" target="_blank" rel="noreferrer"  ...>
+						<span class="sr-only">[25매추가증정]CLA 클라 라이트 마스크 KF94 새부리형 컬러마스크 50매</span>
+					</a>
+					<div class="c-card-item__thumb">
+						<div class="c-card-item__nudge-flag">지금 행사중!</div>
+						<span class="c-lazyload c-lazyload--ratio_1x1">
+							<img loading="lazy" src="https://cdn.011st.com/11dims/resize/248/11src/dl/v2/9/0/2/3/7/0/nrkcR/3442902370_229637034.png" alt="[25매추가증정]CLA 클라 라이트 마스크 KF94 새부리형 컬러마스크 50매">
+						</span>
+					</div>
+					<div class="c-card-item__info">
+						<div class="c-card-item__info-top">
+							<dl>
+							<div class="c-card-item__brand">
+								<dt>브랜드명</dt>
+								<dd>
+									<span class="c-card-item__brand-name">CLA</span>
+									<em class="c-card-item__brand-flag">공식</em>
+								</dd>
+							</div>
+							<div class="c-card-item__name">
+								<dt>상품명</dt>
+								<dd>[25매추가증정]CLA 클라 라이트 마스크 KF94 새부리형 컬러마스크 50매</dd>
+							</div>
+							<div class="c-card-item__price-info">
+								<dt>가격정보</dt>
+								<dd class="c-card-item__price-wrapper">
+									<dd class="c-card-item__lowest">
+										<p class="c-card-item__lowest-text">30일 내 최저가</p>
+										<button type="button" class="c-iconinfo c-iconinfo--help" ...>30일 내 최저가 안내</button>
+									</dd>
+									<dd class="c-card-item__price-del">
+										<span class="sr-only">판매가</span>
+										<del>14,800원</del>
+									</dd>
+								</dd>
+								<dd class="c-card-item__price-wrapper">
+									<dd class="c-card-item__rate">
+										<span class="sr-only">할인율</span>
+										<span>15%</span>
+									</dd>
+									<dd class="c-card-item__price">
+										<span class="value">12,210</span>원~
+									</dd>
+									<dd class="c-card-item__discount c-card-item__discount--point">
+										<span class="c-card-item__discount-title">(최대할인가)</span>
+									</dd>
+									<dd class="c-card-item__price-delivery">
+										<span class="sr-only">배송비</span>
+										<span class="value">무료</span>
+									</dd>
+								</dd>
+							</div>
+							<div class="c-starrate c-starrate--simply">
+								<dt>판매자평점 및 리뷰</dt>
+								<dd class="c-starrate__sati">
+									<span class="c-starrate__title">판매자 평점</span>
+									<span class="c-starrate__text">4.7</span>
+								</dd>
+								<dd class="c-starrate__review">
+									<span class="sr-only">리뷰</span> 
+									<span class="value">(21,604)</span>
+								</dd>
+							</div>
+							<div class="c-flag-box">
+								<dt>프로모션 정보</dt>
+								<dd class="c-brief-flag">
+									<span class="c-brief-flag__item" ...>쇼킹딜</span>
+									<span class="c-brief-flag__item">최대 799P 적립</span>
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+				<div class="c-card-item__info">
+					<div class="c-card-item__info-top">
+						<div class="c-seller">
+							<dt class="sr-only">스토어명</dt>
+							<dd class="c-seller__name">	
+								<a href="https://shop.11st.co.kr/stores/3535?pdpPrdNo=3442902370" ... >CLA공식스토어</a>
+							</dd>
+						</div>
+					</div>
+					<div class="c-card-item__info-bottom">
+						<dl class="c-card-item__delivery">
+							<dt>배송정보</dt>
+							<dd class="delivery">
+								<em>5/9(토) 도착</em>
+							</dd>
+						</dl>
+					</div>
+				  </div>
+				</div>
+			</li>
+		
+			<li class="c-search-list__item">
+				...
+			</li>
+			<!-- li 태그 반복--> 
+		</ul>
+	</div>
+
+</section>

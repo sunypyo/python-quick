@@ -1,4 +1,4 @@
-- 11장. pptx 모듈 사용시 에러 발생 문제
+- 11장. pptx 모듈 사용시 에러 발생 문제 
 
 - 명령 프롬프트에서 아래 명령으로 python-pptx 를 1.0.2 버전으로 설치합니다.
 pip install python-pptx==1.0.2
